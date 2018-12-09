@@ -1,4 +1,4 @@
-# tugas-1614370012
+# tugas-1614370012-1204
 
 cowok(x,bahrun).
 cowok(bahrun,fahri).
