@@ -1,43 +1,87 @@
 # tugas-1614370012-1204
+(1).
+pria(bahrun).
+pria(fahri).
+pria(arfan).
+pria(farhan).
+pria(burhan).
+pria(ferdi).
+pria(fariz).
 
-cowok(x,bahrun).
-cowok(bahrun,fahri).
-cewek(fahri,salsa).
-cowok(fahri,arfan).
-cewek(bahrun,salma).
-cowok(salma,farhan).
-cewek(x,farah).
-cowok(farah,ferdi).
-cewek(ferdi,syifa).
-cowok(ferdi,faiz).
-cowok(farah,burhan).
+wanita(farah).
+wanita(salma).
+wanita(salsa).
+wanita(syifa).
 
-pengganti raja X keturunan cowok ( anak cowok) dari keturunan cowok, jadi.
+anak_raja(bahrun,farah).
 
-cowok(A,B).
-A=X
-A=bahrun
-A=fahri
+calon_raja(bahrun,fahri,arfan).
+calon_raja(bahrun).
+calon_raja(fahri).
+calon_raja(arfan).
 
-B=bahrun
-B=fahri
-B=arfan
+bahrun(calonraja).
+fahri(calonraja).
+arfan(calonraja).
 
-A ialah variabel yang menampung nama orangtua.
-B ialah variabel yang menampung nama anak cowok.
-sehingga dapat ketahui pengganti raja yang syaratnya memenuhi adalah bahrun,fahri dan arfan.
+cucupria(burhan).
+cucupria(ferdi).
+cucupria(fahri,calonraja).
+cucu(bahrun,arfan,calonraja).
 
-represenasi prolog:
+pertanyaan ?
+1.siapakah keturunan raja?
+2.siapakah cucu raja?
+3.siapakah pengganti raja?
+4.siapakah anak raja?
+5.apakah bahrun calon raja?
 
-pria(rita,abdul).
-pria(rita,rudi).
-pria(husin,rudi).
-perempuan(rudi,siti).
-perempuan(rudi,tuti).
-pria(siti,basir).
-pria(siti,amir).
+(2).represenasi prolog:
 
-(A.)pria(A,D).
+pria(husin).
+pria(abdul).
+pria(rudi).
+pria(amir).
+pria(basir).
+
+wanita(rita).
+wanita(tuti).
+wanita(siti).
+
+anak(rita,abdul,rudi).
+anak(husin,rudi).
+anak(rudi,tuti,siti).
+anak(siti,amir,basir).
+
+memiliki_anak(rita).
+memiliki_anak(husin).
+memiliki_anak(rudi).
+memiliki_anak(siti).
+
+orang_tua(amir,basir,siti).
+orang_tua(basir,siti).
+orang_tua(amir,siti).
+orang_tua(tuti,siti,rudi).
+orang_tua(tuti,rudi).
+orang_tua(siti,rudi).
+orang_tua(rudi,husin).
+orang_tua(abdul,rudi,rita).
+orang_tua(abdul,rita).
+orang_tua(rudi,rita).
+
+nenek(siti,tuti,rita).
+nenek(siti,rita).
+nenek(tuti,rita).
+
+kakek(amir,basir,rudi).
+kakek(amir,rudi).
+kakek(basir,rudi).
+
+cucu(rita,tuti,siti).
+cucu(husi,tuti,siti).
+cucu(rudi,amir,basir).
+
+(A.)siapakah orang tua basir?
 A=siti
 
 (B.)pria(A,D).
